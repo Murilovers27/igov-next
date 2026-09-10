@@ -1,0 +1,4 @@
+.section { margin: 0 auto; max-width: 1180px; padding: 96px 24px; }
+.section h2 { color: var(--color-secondary); font-size: 2.5rem; }
+.list { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 700px) { .list { grid-template-columns: 1fr; } }
