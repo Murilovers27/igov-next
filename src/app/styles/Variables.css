@@ -1,0 +1,75 @@
+:root {
+  /* ---------- CORES DE MARCA ---------- */
+  --color-primary: #FF6509;        /* Laranja - botões, destaques, links */
+  --color-primary-hover: #E85D0F;  /* Laranja mais escuro para hover */
+  --color-secondary: #0a243c;      /* Azul-marinho - header, footer, banners escuros */
+  --color-pink: #E91E8C;
+
+  /* ---------- NEUTROS ---------- */
+  --color-white: #FFFFFF;
+  --color-black: #1A1A1A;
+  --color-bg-light: #F5F6F8;
+  --color-text-body: #4B5563;
+  --color-text-muted: #6B7280;
+  --color-border: #E5E7EB;
+
+  /* ---------- TIPOGRAFIA ---------- */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Escala de fonte MOBILE (base) */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.375rem;  /* 22px */
+  --font-size-2xl: 1.75rem;  /* 28px */
+  --font-size-3xl: 2.25rem;  /* 36px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ---------- ESPAÇAMENTOS (mobile) ---------- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* ---------- BORDAS ---------- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  /* ---------- SOMBRAS ---------- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  /* ---------- LAYOUT ---------- */
+  --container-max-width: 1200px;
+  --container-padding: var(--spacing-md);
+  --header-height: 72px;
+  --transition-base: 0.2s ease-in-out;
+}
+
+/* A partir de tablet (768px+), a escala tipográfica e de espaçamento cresce */
+@media (min-width: 768px) {
+  :root {
+    --font-size-xl: 1.5rem;      /* 24px */
+    --font-size-2xl: 2rem;       /* 32px */
+    --font-size-3xl: 2.75rem;    /* 44px */
+
+    --spacing-lg: 24px;
+    --spacing-xl: 40px;
+    --spacing-2xl: 64px;
+    --spacing-3xl: 96px;
+
+    --container-padding: var(--spacing-lg);
+    --header-height: 88px;
+  }
+}

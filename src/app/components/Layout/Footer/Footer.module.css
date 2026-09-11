@@ -1,0 +1,124 @@
+/* ============ BASE = MOBILE (colunas empilhadas) ============ */
+.footer {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: var(--spacing-2xl) 0 var(--spacing-lg);
+}
+
+.topGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.brandText {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.columnTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.link {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition-base);
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+.contactItem {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 100%;
+}
+
+.bottomBar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-lg);
+}
+
+.copyright {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.legalLinks {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.legalLink {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.5);
+  transition: color var(--transition-base);
+}
+
+.legalLink:hover {
+  color: var(--color-white);
+}
+
+/* ============ TABLET (600px+): grid 2 colunas ============ */
+@media (min-width: 600px) {
+  .topGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--spacing-xl);
+  }
+
+  .brandColumn {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============ DESKTOP (900px+): grid 4 colunas + bottomBar em linha ============ */
+@media (min-width: 900px) {
+  .topGrid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+
+  .brandColumn {
+    grid-column: auto;
+  }
+
+  .bottomBar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
