@@ -4,6 +4,7 @@ import TeamCarousel from "./components/Home/TeamCarousel/TeamCarousel";
 import styles from "./page.module.css";
 import Hero from "./components/Home/Hero/Hero";
 import AboutStrategy from "./components/Home/AboutStrategy/AboutStrategy";
+import AreasOfWork from "./components/Home/AreasOfWork/AreasOfWork";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <AboutStrategy />
+        <AreasOfWork />
       </main>
       <Footer />
     </div>
