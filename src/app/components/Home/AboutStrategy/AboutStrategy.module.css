@@ -100,11 +100,16 @@
   max-width: 520px;
 }
 
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);  
+}
+
 .ctaButton {
-  display: inline-flex;
+     display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
   background-color: var(--color-white);
   color: var(--color-secondary);
   border: 1.5px solid var(--color-secondary);
@@ -112,9 +117,24 @@
   font-size: var(--font-size-sm);
   padding: var(--spacing-md) var(--spacing-lg);
   border-radius: var(--radius-full);
-  margin-top: var(--spacing-sm);
   transition: background-color var(--transition-base), color var(--transition-base);
+  white-space: nowrap;
+ 
 }
+.playButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+  transition: color var(--transition-base), transform var(--transition-base);
+  transform: scale(1.5);
+}
+
+
 
 .ctaButton:hover {
   background-color: var(--color-secondary);
