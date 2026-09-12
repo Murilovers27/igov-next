@@ -1,0 +1,161 @@
+/* ============ BASE = MOBILE ============ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Imagem de fundo full-bleed */
+.imageBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.image {
+  object-fit: cover;
+  /* No mobile, empurra a imagem pra mostrar mais a área clara da esquerda,
+     onde o texto precisa ficar legível */
+  object-position: 25% center;
+}
+
+/* Overlay leve pra garantir contraste do texto em qualquer largura de tela */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.85) 45%,
+    rgba(255, 255, 255, 0.15) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 480px;
+  padding: var(--spacing-xl) 0;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+  line-height: 1.15;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition: background-color var(--transition-base), color var(--transition-base);
+  white-space: nowrap;
+}
+
+.primaryButton {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.primaryButton:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 1.5px solid var(--color-secondary);
+}
+
+.secondaryButton:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* ============ TABLET (768px+) ============ */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .image {
+    object-position: center center;
+  }
+
+  .content {
+    max-width: 520px;
+  }
+
+  .title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .actions {
+    flex-direction: row;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    flex: 0 0 auto;
+  }
+}
+
+/* ============ DESKTOP (1024px+) ============ */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.75) 40%,
+      rgba(255, 255, 255, 0) 65%
+    );
+  }
+
+  .content {
+    padding: var(--spacing-2xl) 0;
+  }
+}
