@@ -16,6 +16,7 @@ export default function Home() {
         <AboutStrategy />
         <AreasOfWork />
         <ProgramBanner eyebrow={""} title={"Saúde"} highlight={"mais perto que quem precisa"} description={"Uma iniciativa do IGOV que leva cuidado, prevenção e dignidade para mais pessoas, por meio de unidades móveis e ações especializadas"} ctaLabel={"Conheça o programa"} ctaHref={"ProgramBannerBack"} image={"/ProgramBannerBack.png"} imageAlt={"Médica atendendo paciente em unidade móvel de saúde"}/>
+        <TeamCarousel />
       </main>
       <Footer />
     </div>
