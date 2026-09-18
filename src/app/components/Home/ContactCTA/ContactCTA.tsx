@@ -10,7 +10,7 @@ export default function ContactCTA() {
           <div className={styles.imageCollage}>
             <div className={styles.imageMain}>
               <Image
-                src="/images/contact-desafio-1.jpg"
+                src="/AboutSt_img2.png"
                 alt="Equipe do IGOV analisando dados em reunião"
                 fill
                 className={styles.image}
@@ -19,7 +19,7 @@ export default function ContactCTA() {
             </div>
             <div className={styles.imageSmall1}>
               <Image
-                src="/images/contact-desafio-2.jpg"
+                src="/AboutSt_img1.png"
                 alt="Colaborador usando tablet"
                 fill
                 className={styles.image}
@@ -28,7 +28,7 @@ export default function ContactCTA() {
             </div>
             <div className={styles.imageSmall2}>
               <Image
-                src="/images/contact-desafio-3.jpg"
+                src="/ProgramBannerBack.png"
                 alt="Equipe de saúde em atendimento"
                 fill
                 className={styles.image}

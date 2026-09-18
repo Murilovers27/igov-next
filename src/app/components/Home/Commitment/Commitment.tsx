@@ -2,11 +2,11 @@ import Image from 'next/image';
 import styles from './Commitment.module.css';
 
 const AVATAR_PHOTOS = [
-  { src: '/images/commitment/avatar-1.jpg', alt: 'Colaboradora do IGOV' },
-  { src: '/images/commitment/avatar-2.jpg', alt: 'Colaboradora do IGOV' },
-  { src: '/images/commitment/avatar-3.jpg', alt: 'Colaboradora do IGOV' },
-  { src: '/images/commitment/avatar-4.jpg', alt: 'Colaboradora do IGOV' },
-  { src: '/images/commitment/avatar-5.jpg', alt: 'Colaborador do IGOV' },
+  { src: '/Commitment/Image1.png', alt: 'Colaboradora do IGOV' },
+  { src: '/Commitment/Image2.png', alt: 'Colaboradora do IGOV' },
+  { src: '/Commitment/Image3.png', alt: 'Colaboradora do IGOV' },
+  { src: '/Commitment/Image4.png', alt: 'Colaboradora do IGOV' },
+  { src: '/Commitment/Image5.png', alt: 'Colaborador do IGOV' },
 ];
 
 export default function Commitment() {

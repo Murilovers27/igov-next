@@ -40,7 +40,7 @@ export default function ContactForm({ variant = 'dark' }: ContactFormProps) {
 
       setStatus('success');
       setFormData({ name: '', organization: '', contact: '' });
-    } catch (error) {
+    } catch {
       setStatus('error');
     }
   };

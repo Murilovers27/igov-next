@@ -8,7 +8,6 @@ import AreasOfWork from "./components/Home/AreasOfWork/AreasOfWork";
 import ProgramBanner from "./components/Home/ProgramBanner/ProgramBanner";
 import PartnersLogos from "./components/Home/PartnersLogos/PartnersLogos";
 import Commitment from "./components/Home/Commitment/Commitment";
-import ContactForm from "./components/Home/ContactCTA/ContactForm";
 import ContactCTA from "./components/Home/ContactCTA/ContactCTA";
 import LocationMap from "./components/Home/LocationMap/LocationMap";
 
@@ -20,7 +19,7 @@ export default function Home() {
         <Hero />
         <AboutStrategy />
         <AreasOfWork />
-        <ProgramBanner eyebrow={""} title={"Saúde"} highlight={"mais perto que quem precisa"} description={"Uma iniciativa do IGOV que leva cuidado, prevenção e dignidade para mais pessoas, por meio de unidades móveis e ações especializadas"} ctaLabel={"Conheça o programa"} ctaHref={"ProgramBannerBack"} image={"/ProgramBannerBack.png"} imageAlt={"Médica atendendo paciente em unidade móvel de saúde"}/>
+        <ProgramBanner eyebrow={"Programa"} title={"Saúde mais perto"} highlight={"de quem precisa"} description={"Uma iniciativa do IGOV que leva cuidado, prevenção e dignidade para mais pessoas, por meio de unidades móveis e ações especializadas"} ctaLabel={"Conheça o programa"} ctaHref={"/programa-cuidar"} image={"/ProgramBannerBack.png"} imageAlt={"Médica atendendo paciente em unidade móvel de saúde"}/>
         <TeamCarousel />
         <PartnersLogos />
         <Commitment />

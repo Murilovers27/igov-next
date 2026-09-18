@@ -95,9 +95,16 @@ export default function TeamCarousel() {
 
   useEffect(() => {
     if (!emblaApi) return;
-    onSelect();
     emblaApi.on('select', onSelect);
     emblaApi.on('reInit', onSelect);
+
+    const frame = requestAnimationFrame(onSelect);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      emblaApi.off('select', onSelect);
+      emblaApi.off('reInit', onSelect);
+    };
   }, [emblaApi, onSelect]);
 
   return (

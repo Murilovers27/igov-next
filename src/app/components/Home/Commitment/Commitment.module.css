@@ -2,6 +2,7 @@
 .section {
   width: 100%;
   padding: var(--spacing-2xl) 0;
+  background-color: var(--color-bg-light);
   overflow: hidden;
 }
 
@@ -45,8 +46,8 @@
   overflow: hidden;
   border: 3px solid var(--color-white);
   box-shadow: var(--shadow-md);
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
 }
 
 .avatarImage {
@@ -111,7 +112,7 @@
 
 .quoteBox {
   position: relative;
-  background-color: var(--color-bg-light);
+  background-color: #f4e8df;
   border-radius: var(--radius-md);
   padding: var(--spacing-lg);
   margin-top: var(--spacing-sm);
@@ -127,7 +128,7 @@
   font-size: var(--font-size-base);
   color: var(--color-secondary);
   line-height: 1.6;
-  font-style: italic;
+  font-style: normal;
 }
 
 .quoteAuthor {
@@ -172,7 +173,39 @@
   .collage {
     flex: 0 0 40%;
     max-width: none;
-    height: 380px;
+    height: 360px;
+  }
+
+  .avatarWrapper {
+    width: 84px;
+    height: 84px;
+  }
+
+  .avatar1 {
+    top: 2%;
+    left: 8%;
+  }
+
+  .avatar2 {
+    top: 0;
+    right: 6%;
+  }
+
+  .avatar3 {
+    top: 37%;
+    right: 31%;
+    width: 96px;
+    height: 96px;
+  }
+
+  .avatar4 {
+    bottom: 18%;
+    right: 0;
+  }
+
+  .avatar5 {
+    bottom: 0;
+    left: 42%;
   }
 
   .content {
@@ -185,5 +218,9 @@
 
   .quoteBox {
     padding: var(--spacing-xl);
+  }
+
+  .quoteText {
+    font-size: var(--font-size-base);
   }
 }
