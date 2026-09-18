@@ -93,7 +93,7 @@
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-sm);
   padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: var(--radius-full);
+  border-radius: 5px;
   margin-top: var(--spacing-sm);
   white-space: nowrap;
   transition: background-color var(--transition-base);

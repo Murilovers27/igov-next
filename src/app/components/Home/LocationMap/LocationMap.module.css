@@ -1,0 +1,106 @@
+/* ============ BASE = MOBILE ============ */
+.section {
+  position: relative;
+  width: 100%;
+}
+
+/* Mapa full-bleed, ocupa a tela inteira */
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(15%); /* deixa o mapa levemente dessaturado, mais discreto visualmente */
+}
+
+/* Card de contato: no mobile fica LOGO ABAIXO do mapa, no fluxo normal
+   (não flutuando por cima, que ficaria apertado em telas pequenas) */
+.container {
+  margin-top: calc(-1 * var(--spacing-xl));
+  position: relative;
+  z-index: 2;
+}
+
+.infoCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 340px;
+}
+
+.cardTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-body);
+  line-height: 1.5;
+}
+
+.infoItem a {
+  color: var(--color-text-body);
+  transition: color var(--transition-base);
+}
+
+.infoItem a:hover {
+  color: var(--color-primary);
+}
+
+.infoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 107, 26, 0.1);
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+/* ============ TABLET (768px+) ============ */
+@media (min-width: 768px) {
+  .mapWrapper {
+    height: 420px;
+  }
+}
+
+/* ============ DESKTOP (1024px+): card flutua SOBRE o mapa ============ */
+@media (min-width: 1024px) {
+  .mapWrapper {
+    height: 480px;
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-start;
+    pointer-events: none; /* deixa cliques passarem pro mapa, exceto onde o card está */
+  }
+
+  .infoCard {
+    margin-top: var(--spacing-2xl);
+    pointer-events: auto; /* reativa clique só na área do card */
+  }
+}

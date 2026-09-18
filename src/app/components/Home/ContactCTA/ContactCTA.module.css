@@ -1,0 +1,234 @@
+/* ============ BASE = MOBILE ============ */
+.section {
+  width: 100%;
+  padding: var(--spacing-2xl) 0;
+}
+
+.banner {
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  overflow: hidden;
+}
+
+/* ---------- Colagem de imagens ---------- */
+.imageCollage {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  display: none; /* escondida no mobile pra priorizar o formulário, que é a ação principal */
+}
+
+.imageMain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.imageSmall1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 45%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 3px solid var(--color-secondary);
+}
+
+.imageSmall2 {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: 32%;
+  height: 42%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 3px solid var(--color-secondary);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.circleDecoration {
+  position: absolute;
+  top: 42%;
+  right: 30%;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  z-index: 2;
+}
+
+/* ---------- Conteúdo ---------- */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  line-height: 1.25;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.description {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+/* ---------- Formulário ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-md);
+  border-radius: 5px;
+  margin-top: var(--spacing-xs);
+  transition: background-color var(--transition-base);
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feedbackSuccess {
+  font-size: var(--font-size-sm);
+  color: #86efac; /* verde claro, legível sobre fundo escuro */
+  margin-top: var(--spacing-xs);
+}
+
+.feedbackError {
+  font-size: var(--font-size-sm);
+  color: #fca5a5; /* vermelho claro, legível sobre fundo escuro */
+  margin-top: var(--spacing-xs);
+}
+
+/* Variante clara do form, pra reusar em fundo branco (ex: página de contato dedicada) */
+.formLight .input {
+  border-color: var(--color-border);
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.formLight .input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* ============ TABLET (768px+) ============ */
+@media (min-width: 768px) {
+  .banner {
+    padding: var(--spacing-2xl);
+  }
+
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .description {
+    font-size: var(--font-size-lg);
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .input {
+    flex: none;
+  }
+
+  .submitButton {
+    flex: none;
+  }
+}
+
+/* ============ DESKTOP (1024px+): imagem volta a aparecer, lado a lado ============ */
+@media (min-width: 1024px) {
+  .banner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-2xl);
+  }
+
+  .imageCollage {
+    display: block;
+    flex: 0 0 38%;
+    height: 320px;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .input {
+    flex: none;
+  }
+
+  .submitButton {
+    flex: none;
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+}
