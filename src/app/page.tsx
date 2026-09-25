@@ -1,21 +1,20 @@
-import Footer from "./components/Layout/Footer/Footer";
-import Header from "./components/Layout/Header/Header";
-import TeamCarousel from "./components/Home/TeamCarousel/TeamCarousel";
+import PageShell from "@/components/Layout/PageShell";
+import TeamCarousel from "@/components/Home/TeamCarousel/TeamCarousel";
 import styles from "./page.module.css";
-import Hero from "./components/Home/Hero/Hero";
-import AboutStrategy from "./components/Home/AboutStrategy/AboutStrategy";
-import AreasOfWork from "./components/Home/AreasOfWork/AreasOfWork";
-import ProgramBanner from "./components/Home/ProgramBanner/ProgramBanner";
-import PartnersLogos from "./components/Home/PartnersLogos/PartnersLogos";
-import Commitment from "./components/Home/Commitment/Commitment";
-import ContactCTA from "./components/Home/ContactCTA/ContactCTA";
-import LocationMap from "./components/Home/LocationMap/LocationMap";
+import Hero from "@/components/Home/Hero/Hero";
+import AboutStrategy from "@/components/Home/AboutStrategy/AboutStrategy";
+import AreasOfWork from "@/components/Home/AreasOfWork/AreasOfWork";
+import ProgramBanner from "@/components/Home/ProgramBanner/ProgramBanner";
+import PartnersLogos from "@/components/Home/PartnersLogos/PartnersLogos";
+import Commitment from "@/components/Home/Commitment/Commitment";
+import ContactCTA from "@/components/Home/ContactCTA/ContactCTA";
+import LocationMap from "@/components/Home/LocationMap/LocationMap";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <Header />
-      <main>
+    <PageShell>
+      <div className={styles.page}>
+        <main>
         <Hero />
         <AboutStrategy />
         <AreasOfWork />
@@ -25,9 +24,9 @@ export default function Home() {
         <Commitment />
         <ContactCTA />
         <LocationMap /> 
-      </main>
-      <Footer />
-    </div>
+        </main>
+      </div>
+    </PageShell>
   );
 }
 

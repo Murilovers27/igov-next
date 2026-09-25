@@ -1,0 +1,130 @@
+/* ============ BASE = MOBILE ============ */
+.section {
+  width: 100%;
+  padding: var(--spacing-2xl) 0;
+  background-color: #EAF3F1; /* verde-menta claro, mesmo tom da referência */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  max-width: 640px;
+}
+
+.eyebrow {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+}
+
+.description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* ---------- Passos ---------- */
+/* No mobile, empilha verticalmente sem setas (setas horizontais não fazem
+   sentido em coluna — usamos espaçamento/borda como separador visual) */
+.stepsRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.stepWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex: 1;
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid rgba(23, 35, 63, 0.1);
+}
+
+.numberBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.iconWrapper {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stepTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+}
+
+.stepDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-body);
+  line-height: 1.5;
+}
+
+/* Seta escondida no mobile (layout em coluna) */
+.arrow {
+  display: none;
+}
+
+/* ============ TABLET (768px+) ============ */
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* ============ DESKTOP (1024px+): linha única com setas ============ */
+@media (min-width: 1024px) {
+  .stepsRow {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .stepWrapper {
+    flex: 1;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .step {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    opacity: 0.5;
+    flex-shrink: 0;
+    margin-top: 18px; /* alinha verticalmente com o número/ícone, não com o texto todo */
+  }
+}
