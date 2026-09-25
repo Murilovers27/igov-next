@@ -1,69 +1,33 @@
-import Image from "next/image";
+import Footer from "./components/Layout/Footer/Footer";
+import Header from "./components/Layout/Header/Header";
+import TeamCarousel from "./components/Home/TeamCarousel/TeamCarousel";
 import styles from "./page.module.css";
+import Hero from "./components/Home/Hero/Hero";
+import AboutStrategy from "./components/Home/AboutStrategy/AboutStrategy";
+import AreasOfWork from "./components/Home/AreasOfWork/AreasOfWork";
+import ProgramBanner from "./components/Home/ProgramBanner/ProgramBanner";
+import PartnersLogos from "./components/Home/PartnersLogos/PartnersLogos";
+import Commitment from "./components/Home/Commitment/Commitment";
+import ContactCTA from "./components/Home/ContactCTA/ContactCTA";
+import LocationMap from "./components/Home/LocationMap/LocationMap";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+      <Header />
+      <main>
+        <Hero />
+        <AboutStrategy />
+        <AreasOfWork />
+        <ProgramBanner eyebrow={"Programa"} title={"Saúde mais perto"} highlight={"de quem precisa"} description={"Uma iniciativa do IGOV que leva cuidado, prevenção e dignidade para mais pessoas, por meio de unidades móveis e ações especializadas"} ctaLabel={"Conheça o programa"} ctaHref={"/programa-cuidar"} image={"/ProgramBannerBack.png"} imageAlt={"Médica atendendo paciente em unidade móvel de saúde"}/>
+        <TeamCarousel />
+        <PartnersLogos />
+        <Commitment />
+        <ContactCTA />
+        <LocationMap /> 
       </main>
+      <Footer />
     </div>
   );
 }
+

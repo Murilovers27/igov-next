@@ -1,0 +1,77 @@
+/* ============ BASE = MOBILE ============ */
+.section {
+  width: 100%;
+  padding: var(--spacing-xl) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+  overflow-x: auto;
+  /* esconde a barra de scroll horizontal mas mantém o arrasto funcional no mobile */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  width: max-content;
+  min-width: 100%;
+}
+
+.logoWrapper {
+  position: relative;
+  width: 160px;
+  height: 88px;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter var(--transition-base), opacity var(--transition-base);
+}
+
+.logoWrapper:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+/* ============ TABLET (768px+) ============ */
+@media (min-width: 768px) {
+  .container {
+    overflow-x: visible;
+  }
+
+  .track {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-2xl);
+    width: 100%;
+  }
+
+  .logoWrapper {
+    width: 180px;
+    height: 96px;
+  }
+}
+
+/* ============ DESKTOP (1024px+) ============ */
+@media (min-width: 1024px) {
+  .track {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .logoWrapper {
+    width: 180px;
+    height: 96px;
+  }
+}

@@ -1,0 +1,133 @@
+/* ============ BASE = MOBILE ============ */
+.section {
+  width: 100%;
+  padding: var(--spacing-2xl) 0;
+}
+
+.banner {
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  overflow: hidden;
+}
+
+/* ---------- Colagem de imagens ---------- */
+.imageCollage {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  display: none;
+}
+
+.imageLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.imageRightTop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 42%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.imageRightBottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 38%;
+  height: 48%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.circleDecoration {
+  position: absolute;
+  top: 48%;
+  left: 52%;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Conteúdo ---------- */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  line-height: 1.25;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.description {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+/* ============ TABLET (768px+) ============ */
+@media (min-width: 768px) {
+  .banner {
+    padding: var(--spacing-2xl);
+  }
+
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .description {
+    font-size: var(--font-size-lg);
+  }
+
+}
+
+/* ============ DESKTOP (1024px+): imagem volta a aparecer, lado a lado ============ */
+@media (min-width: 1024px) {
+  .banner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-2xl);
+  }
+
+  .imageCollage {
+    display: block;
+    flex: 0 0 38%;
+    height: 320px;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .title {
+    font-size: var(--font-size-3xl);
+  }
+
+}
