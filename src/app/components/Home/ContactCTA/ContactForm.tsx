@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import styles from './ContactCTA.module.css';
+import styles from './ContactForm.module.css';
 
 interface FormData {
   name: string;

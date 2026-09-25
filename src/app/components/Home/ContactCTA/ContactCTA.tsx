@@ -8,31 +8,31 @@ export default function ContactCTA() {
       <div className={`${styles.container} container`}>
         <div className={styles.banner}>
           <div className={styles.imageCollage}>
-            <div className={styles.imageMain}>
-              <Image
-                src="/AboutSt_img2.png"
-                alt="Equipe do IGOV analisando dados em reunião"
+            <div className={styles.imageLeft}>
+                <Image
+                  src="/CTA_IMG/cons.png"
+                alt="Colaborador do IGOV trabalhando com laptop e documentos"
                 fill
                 className={styles.image}
-                sizes="(max-width: 1024px) 45vw, 300px"
+                sizes="(max-width: 1024px) 60vw, 260px"
               />
             </div>
-            <div className={styles.imageSmall1}>
-              <Image
-                src="/AboutSt_img1.png"
-                alt="Colaborador usando tablet"
+            <div className={styles.imageRightTop}>
+                <Image
+                  src="/CTA_IMG/pink.png"
+                alt="Colaboradora do IGOV conversando ao ar livre"
                 fill
                 className={styles.image}
-                sizes="150px"
+                sizes="140px"
               />
             </div>
-            <div className={styles.imageSmall2}>
-              <Image
-                src="/ProgramBannerBack.png"
-                alt="Equipe de saúde em atendimento"
+            <div className={styles.imageRightBottom}>
+                <Image
+                  src="/CTA_IMG/work.png"
+                alt="Equipe de saúde em atendimento na unidade móvel"
                 fill
                 className={styles.image}
-                sizes="150px"
+                sizes="140px"
               />
             </div>
             <span className={styles.circleDecoration} aria-hidden="true" />

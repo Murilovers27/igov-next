@@ -18,40 +18,38 @@
 .imageCollage {
   position: relative;
   width: 100%;
-  height: 220px;
-  display: none; /* escondida no mobile pra priorizar o formulário, que é a ação principal */
+  height: 280px;
+  display: none;
 }
 
-.imageMain {
+.imageLeft {
   position: absolute;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 58%;
   height: 100%;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
-.imageSmall1 {
+.imageRightTop {
   position: absolute;
   top: 0;
   right: 0;
-  width: 35%;
-  height: 45%;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 3px solid var(--color-secondary);
-}
-
-.imageSmall2 {
-  position: absolute;
-  bottom: 0;
-  right: 5%;
-  width: 32%;
+  width: 38%;
   height: 42%;
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 3px solid var(--color-secondary);
+}
+
+.imageRightBottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 38%;
+  height: 48%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
 .image {
@@ -60,13 +58,14 @@
 
 .circleDecoration {
   position: absolute;
-  top: 42%;
-  right: 30%;
-  width: 32px;
-  height: 32px;
+  top: 48%;
+  left: 52%;
+  width: 36px;
+  height: 36px;
   border-radius: var(--radius-full);
   background-color: var(--color-primary);
   z-index: 2;
+  box-shadow: var(--shadow-md);
 }
 
 /* ---------- Conteúdo ---------- */
@@ -93,82 +92,6 @@
   line-height: 1.6;
 }
 
-/* ---------- Formulário ---------- */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-md);
-}
-
-.input {
-  width: 100%;
-  padding: var(--spacing-md);
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--color-white);
-  font-size: var(--font-size-base);
-  font-family: var(--font-family-base);
-  transition: border-color var(--transition-base), background-color var(--transition-base);
-}
-
-.input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.input:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-.submitButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-sm);
-  padding: var(--spacing-md);
-  border-radius: 5px;
-  margin-top: var(--spacing-xs);
-  transition: background-color var(--transition-base);
-}
-
-.submitButton:hover:not(:disabled) {
-  background-color: var(--color-primary-hover);
-}
-
-.submitButton:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.feedbackSuccess {
-  font-size: var(--font-size-sm);
-  color: #86efac; /* verde claro, legível sobre fundo escuro */
-  margin-top: var(--spacing-xs);
-}
-
-.feedbackError {
-  font-size: var(--font-size-sm);
-  color: #fca5a5; /* vermelho claro, legível sobre fundo escuro */
-  margin-top: var(--spacing-xs);
-}
-
-/* Variante clara do form, pra reusar em fundo branco (ex: página de contato dedicada) */
-.formLight .input {
-  border-color: var(--color-border);
-  background-color: var(--color-white);
-  color: var(--color-black);
-}
-
-.formLight .input::placeholder {
-  color: var(--color-text-muted);
-}
-
 /* ============ TABLET (768px+) ============ */
 @media (min-width: 768px) {
   .banner {
@@ -183,17 +106,6 @@
     font-size: var(--font-size-lg);
   }
 
-  .form {
-    flex-direction: column;
-  }
-
-  .input {
-    flex: none;
-  }
-
-  .submitButton {
-    flex: none;
-  }
 }
 
 /* ============ DESKTOP (1024px+): imagem volta a aparecer, lado a lado ============ */
@@ -218,17 +130,4 @@
     font-size: var(--font-size-3xl);
   }
 
-  .form {
-    flex-direction: column;
-  }
-
-  .input {
-    flex: none;
-  }
-
-  .submitButton {
-    flex: none;
-    padding-left: var(--spacing-xl);
-    padding-right: var(--spacing-xl);
-  }
 }
