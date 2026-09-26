@@ -124,9 +124,11 @@ export default function TeamCarousel() {
               aria-label="Ver membro anterior"
               type="button"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <span
+                className={styles.navIcon}
+                aria-hidden="true"
+                style={{ maskImage: "url('/icons/arrow_back_ios.svg')", WebkitMaskImage: "url('/icons/arrow_back_ios.svg')" }}
+              />
             </button>
             <button
               className={styles.navButton}
@@ -135,9 +137,11 @@ export default function TeamCarousel() {
               aria-label="Ver próximo membro"
               type="button"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <span
+                className={styles.navIcon}
+                aria-hidden="true"
+                style={{ maskImage: "url('/icons/arrow_forward_ios_24dp.svg')", WebkitMaskImage: "url('/icons/arrow_forward_ios_24dp.svg')" }}
+              />
             </button>
           </div>
         </div>
